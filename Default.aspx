@@ -14,7 +14,7 @@
 */ -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>The IIIF British Library Item Viewer</title>
+    <title>The Sanddragon Item Viewer</title>
 <link rel="stylesheet" type="text/css" media="print" href="~/css/SanddragonItemViewer.print.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="~/css/SanddragonItemViewer.css" />
 <base href="http://localhost/SanddragonItemViewer/"/>   

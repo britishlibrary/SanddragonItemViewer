@@ -30,12 +30,12 @@ For an overview of this project please visit http://sanddragon.bl.uk
 	- WidgetServer - [SanddragonWidget website]/
 
 	NB - it is assumed that the SanddragonItemViewer, SanddragonWidget and SanddragonImageService, all reside on the same server, 
-		if this is not the case you will need to modify the init function in SanddragonItemViewerController.js.
+		if this is not the case you will need to modify the init function in SanddragonItemViewer.js.
 
 5. Update the BASE tag in Default.aspx so that the website can pick up the javascript files - 
 	- <base href="http://[SanddragonItemViewer server]/[SanddragonItemViewer website]/"/>
 
-6. Update the function getItemMetadata in SanddragonItemViewerController.js to return json values that will provide data to the itemViewer -
+6. Update the function getItemMetadata in SanddragonItemViewer.js to return json values that will provide data to the itemViewer -
 	It should follow this pattern -
 
         var metadata = '{"ID":"[Book ID]","ImageList":[';

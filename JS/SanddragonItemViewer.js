@@ -83,10 +83,9 @@ var SanddragonItemViewer = function (controllerName, controllerDivId, itemId, pa
     var PageLastButton = null;
     var ViewButton = null;
 
-    var Server = "http://wsw772318/";
+    var Server = "http://localhost/";
     var ViewerServer = Server + "";
     var ImageServer = Server + "";
-    var ImageMetadataServer = Server + "";
     var WidgetServer = Server + "";
 
     this.init = function () {
@@ -102,9 +101,6 @@ var SanddragonItemViewer = function (controllerName, controllerDivId, itemId, pa
         if (document.getElementById("ImageServer").value != "") {
             ImageServer = Server + document.getElementById("ImageServer").value;
         }
-        if (document.getElementById("ImageMetadataServer").value != "") {
-            ImageMetadataServer = Server + document.getElementById("ImageMetadataServer").value;
-        }
         if (document.getElementById("WidgetServer").value != "") {
             WidgetServer = Server + document.getElementById("WidgetServer").value;
         }
@@ -117,7 +113,7 @@ var SanddragonItemViewer = function (controllerName, controllerDivId, itemId, pa
     }
 
     function getItemMetadata() {
-        var metadata = '{"ID":"[Book ID]","ImageList":[';		
+		var metadata = '{"ID":"[Book ID]","ImageList":[';
         metadata += '{"PageID":"[Page 1 ID]","ImageID":"RoyalMS","RoleType":"Page"}';
         metadata += ',{"PageID":"[Page 2 ID]","ImageID":"RoyalMS","RoleType":"Title"}';
         metadata += ',{"PageID":"[Page 3 ID]","ImageID":"RoyalMS","RoleType":"Page"}';
@@ -745,7 +741,7 @@ var SanddragonItemViewer = function (controllerName, controllerDivId, itemId, pa
 
     function loadImageMetadata(id) {
         var data = null;
-        var url = ImageMetadataServer + id + "/info.json";
+        var url = ImageServer + id + "/info.json";
 
         var arrActiveX = ["Msxml2.XMLHTTP", "Msxml3.XMLHTTP", "Microsoft.XMLHTTP"];
         if (window.ActiveXObject) {
@@ -1111,7 +1107,7 @@ var SanddragonItemViewer = function (controllerName, controllerDivId, itemId, pa
     }
 
     function getImageMetadataURL(pos, callback, pageside) {
-        var url = ImageServer + "ImageMetadata/" + (pageside ? pageside + "/" : "") + pos + "/" + PageList[pos].ImageID + "?callback=" + controllerName + "." + callback;
+        var url = ImageServer + (pageside ? pageside + "/" : "") + pos + "/" + PageList[pos].ImageID + "?callback=" + controllerName + "." + callback;
         return url;
     }
 

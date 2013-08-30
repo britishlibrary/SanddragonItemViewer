@@ -30,7 +30,6 @@ namespace SanddragonItemViewer
             itemViewerServer.Value = ConfigurationManager.AppSettings["Server"];
             ViewerServer.Value = ConfigurationManager.AppSettings["ViewerServer"];
             ImageServer.Value = ConfigurationManager.AppSettings["ImageServer"];
-            ImageMetadataServer.Value = ConfigurationManager.AppSettings["ImageMetadataServer"];
             WidgetServer.Value = ConfigurationManager.AppSettings["WidgetServer"];
         }
     }

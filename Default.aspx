@@ -14,7 +14,7 @@
 */ -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>The Sanddragon Item Viewer</title>
+    <title>The IIIF British Library Item Viewer</title>
 <link rel="stylesheet" type="text/css" media="print" href="~/css/SanddragonItemViewer.print.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="~/css/SanddragonItemViewer.css" />
 <base href="http://localhost/SanddragonItemViewer/"/>   
@@ -64,7 +64,6 @@
         <asp:HiddenField ID="itemViewerServer" runat="server" />
         <asp:HiddenField ID="ViewerServer" runat="server" />
         <asp:HiddenField ID="ImageServer" runat="server" />
-        <asp:HiddenField ID="ImageMetadataServer" runat="server" />
         <asp:HiddenField ID="WidgetServer" runat="server" />
         <div id="SanddragonItemViewer"></div>
     </form>
